@@ -33,14 +33,14 @@ public class Gui implements Runnable {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
 
-        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
         panel.setLayout(new BorderLayout());
         panel.add(label, BorderLayout.PAGE_END);
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("League Meme - github.com/zkxjzmswkwl/league-map-inator");
-        frame.setSize(500, 600);
+        frame.setSize(505, 505);
         frame.setAlwaysOnTop(true);
         frame.setVisible(true);
     }
