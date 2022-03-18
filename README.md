@@ -13,3 +13,14 @@ Currently the resolution is hard coded to only support 5120x1440, but you can ch
 ## Example
 
 ![Example](https://media.discordapp.net/attachments/806715624377155625/954364980252250182/unknown.png?width=1693&height=476)
+
+<hr>
+
+## Building
+The project is setup to use [Maven](https://maven.apache.org/). To build, you must have Maven installed and in your PATH.
+
+Build command
+
+`mvn package assembly:single`
+
+This will package all dependencies within the jar file itself. The built program will be located in the `./target/` directory.
