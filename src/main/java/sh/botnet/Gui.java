@@ -15,21 +15,12 @@ public class Gui implements Runnable {
     // This shouldn't be in the UI class for obvious reasons
     // Problem with that: I don't want to bother encapsulating it elsewhere and then wiring 
     // threads together properly for a meme project that's < 150 lines.
-    private boolean isCapturing;
-
-    public Gui() {
-        this.isCapturing = true;
-    }
 
     public void setNewMapFrame(BufferedImage minimapCapture) {
         imageIcon = new ImageIcon(minimapCapture);
         // imageIcon.setImage(minimapCapture);
         this.label.setIcon(imageIcon);
     } 
-
-    public boolean shouldCapture() {
-        return this.isCapturing;
-    }
 
     private void setupFlatlaf() {
         FlatDarculaLaf.setup();

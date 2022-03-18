@@ -43,12 +43,10 @@ public class App implements Runnable {
             guiThread.start();
 
             for (;;) {
-                if (gui.shouldCapture()) {
-                    BufferedImage cap = this.screenie(this.minimapRect);
-                    cap = this.scale(cap, 500, 500);
-                    gui.setNewMapFrame(cap);
-                    Thread.sleep(12);
-                }
+                BufferedImage cap = this.screenie(this.minimapRect);
+                cap = this.scale(cap, 500, 500);
+                gui.setNewMapFrame(cap);
+                Thread.sleep(12);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
